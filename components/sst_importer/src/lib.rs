@@ -22,6 +22,7 @@ mod caching;
 pub mod import_mode2;
 pub mod metrics;
 pub mod sst_importer;
+mod sst_merge_iter;
 
 pub use self::{
     config::{Config, ConfigManager},
@@ -29,6 +30,7 @@ pub use self::{
     import_file::{API_VERSION_2, sst_meta_to_path},
     import_mode2::range_overlaps,
     sst_importer::SstImporter,
+    sst_merge_iter::BinaryIterator,
     sst_writer::{RawSstWriter, TxnSstWriter},
     util::{copy_sst_for_ingestion, prepare_sst_for_ingestion},
 };
